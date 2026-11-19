@@ -12,7 +12,7 @@ OFF_Section= [
 ]
 
 random.seed(42)
-tickets= random.choices(OFF_Section, k=1000)
+tickets= random.choices(OFF_Section, k=1000000)
 counts= []
 sections= []
 tickets.sort(key=str.lower)
@@ -31,4 +31,5 @@ idx_bestplace= counts.index(bestplace)
 print("----------------Occupied tickets at the Dua Lipa concert----------------")
 for i in range(len(sections)):
     print("-" + str(sections[i]) + ": " + str(counts[i]))
-print(f"**The most popular section in the concert was {sections[idx_bestplace]} with {bestplace} tickets out of 1000")
+print(" ")
+print(f"**The most popular section in the concert was {sections[idx_bestplace]} with {bestplace} tickets out of 1000000")
